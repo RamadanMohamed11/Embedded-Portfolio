@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, Zap, Code, Wrench, Award, Users } from 'lucide-react';
+import { Cpu, Zap, Code, Wrench, Award, Users, Bot } from 'lucide-react';
 
 export default function About() {
   const highlights = [
@@ -64,6 +64,75 @@ export default function About() {
               <h4 className="text-xl text-white font-medium">Bachelor of Computer and Control Engineering</h4>
             </div>
             <p className="text-gray-300 text-lg">Assiut University, Egypt (October 2020 - July 2025)</p>
+          </div>
+        </div>
+
+        {/* Volunteering Experience */}
+        <div className="mt-16 animate-fade-in-up">
+          <h3 className="text-3xl font-bold text-white mb-8 text-center">Volunteering Experience</h3>
+          <div className="space-y-8">
+            {/* AC Head at Robotics Team */}
+            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-400/50 transition-all duration-300 group">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div>
+                  <h4 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                    AC Head at Robotics Team
+                  </h4>
+                  <p className="text-blue-400 font-medium">January 2025 - May 2025</p>
+                </div>
+                <div className="flex items-center gap-2 mt-2 md:mt-0">
+                  <Bot className="w-5 h-5 text-purple-400" />
+                  <span className="text-purple-400 text-sm font-medium">Leadership Role</span>
+                </div>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                As the AC Head of the robotics team, I plan and manage training in Embedded Systems, ROS & Raspberry Pi, 
+                Hardware, and Computer Vision. I design learning paths with hands-on workshops and projects, mentor members, 
+                and oversee technical progress. I also support collaboration, guide project execution, and contribute to 
+                strategic decisions and competition readiness to boost the team's overall performance.
+              </p>
+            </div>
+
+            {/* AC Member at Robotics Team */}
+            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-400/50 transition-all duration-300 group">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div>
+                  <h4 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                    AC Member at Robotics Team
+                  </h4>
+                  <p className="text-blue-400 font-medium">October 2023 - January 2025</p>
+                </div>
+                <div className="flex items-center gap-2 mt-2 md:mt-0">
+                  <Code className="w-5 h-5 text-green-400" />
+                  <span className="text-green-400 text-sm font-medium">Teaching & Mentoring</span>
+                </div>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                As an AC member of the robotics team, I teach C programming and Arduino, mentor team members, and 
+                contribute to developing and implementing robotics projects, ensuring successful collaboration and completion.
+              </p>
+            </div>
+
+            {/* AC Member at ASME Team */}
+            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-400/50 transition-all duration-300 group">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div>
+                  <h4 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                    AC Member at ASME Team
+                  </h4>
+                  <p className="text-blue-400 font-medium">September 2021 - July 2025</p>
+                </div>
+                <div className="flex items-center gap-2 mt-2 md:mt-0">
+                  <Award className="w-5 h-5 text-yellow-400" />
+                  <span className="text-yellow-400 text-sm font-medium">Competition & Training</span>
+                </div>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                As an AC member of the ASME team, I teach C++, Arduino, and Arduino OOP, while also contributing to 
+                competitions. My role includes guiding technical learning, mentoring members, and collaborating on 
+                projects to support the team's success.
+              </p>
+            </div>
           </div>
         </div>
 

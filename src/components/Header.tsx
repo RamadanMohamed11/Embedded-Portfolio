@@ -44,13 +44,13 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
+            <a href="https://www.linkedin.com/in/ramadan-mohamed-31624a220/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-125 hover:rotate-12">
+              <Linkedin size={20} />
+            </a>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-125 hover:rotate-12">
               <Github size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-125 hover:rotate-12">
-              <Linkedin size={20} />
-            </a>
-            <a href="mailto:ramadan.mohamed@example.com" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:scale-125 hover:rotate-12">
+            <a href="mailto:ramadan.work010@gmail.com" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:scale-125 hover:rotate-12">
               <Mail size={20} />
             </a>
           </div>
@@ -85,13 +85,13 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
               </button>
             </nav>
             <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-gray-800">
+              <a href="https://www.linkedin.com/in/ramadan-mohamed-31624a220/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-125">
+                <Linkedin size={20} />
+              </a>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-125">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-125">
-                <Linkedin size={20} />
-              </a>
-              <a href="mailto:ramadan.mohamed@example.com" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:scale-125">
+              <a href="mailto:ramadan.work010@gmail.com" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:scale-125">
                 <Mail size={20} />
               </a>
             </div>

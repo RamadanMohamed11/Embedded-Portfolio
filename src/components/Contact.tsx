@@ -25,7 +25,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-black">
+    <section id="contact" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
@@ -47,7 +47,9 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-white group-hover:text-blue-400 transition-colors">Email</h4>
-                  <p className="text-gray-400">ramadan.mohamed@example.com</p>
+                  <a href="mailto:ramadan.work010@gmail.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+                    ramadan.work010@gmail.com
+                  </a>
                 </div>
               </div>
               
@@ -56,8 +58,10 @@ export default function Contact() {
                   <Phone className="w-6 h-6 text-green-400" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium text-white group-hover:text-green-400 transition-colors">Phone</h4>
-                  <p className="text-gray-400">+1 (555) 123-4567</p>
+                  <h4 className="text-lg font-medium text-white group-hover:text-green-400 transition-colors">WhatsApp</h4>
+                  <a href="https://wa.me/2001505599648" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
+                    01505599648
+                  </a>
                 </div>
               </div>
               
@@ -76,6 +80,14 @@ export default function Contact() {
               <h4 className="text-lg font-medium text-white mb-4">Connect with me</h4>
               <div className="flex space-x-4">
                 <a
+                  href="https://www.linkedin.com/in/ramadan-mohamed-31624a220/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-all duration-300 hover:scale-110 hover:rotate-12"
+                >
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <a
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -83,21 +95,19 @@ export default function Contact() {
                 >
                   <Github className="w-6 h-6" />
                 </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-all duration-300 hover:scale-110 hover:rotate-12"
-                >
-                  <Linkedin className="w-6 h-6" />
-                </a>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="animate-fade-in-right">
-            <form onSubmit={handleSubmit} className="bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-blue-400/50 transition-all duration-300">
+            <form 
+              action="mailto:ramadan.work010@gmail.com" 
+              method="post" 
+              encType="text/plain"
+              onSubmit={handleSubmit} 
+              className="bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-blue-400/50 transition-all duration-300"
+            >
               <h3 className="text-2xl font-semibold text-white mb-6">Send a Message</h3>
               
               <div className="grid md:grid-cols-2 gap-6 mb-6">
