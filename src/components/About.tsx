@@ -16,7 +16,7 @@ export default function About() {
     {
       icon: <Code className="w-8 h-8 text-green-400" />,
       title: "Programming",
-      description: "Skilled in C/C++, Python, Assembly, and various embedded development frameworks"
+      description: "Skilled in C/C++, Python, and various embedded development frameworks"
     },
     {
       icon: <Wrench className="w-8 h-8 text-purple-400" />,
@@ -46,45 +46,50 @@ export default function About() {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-8 animate-pulse"></div>
         </div>
 
+        {/* Personal Image and Education */}
+        <div className="text-center mb-16 animate-fade-in-up">
+          <div className="relative inline-block mb-8">
+            <img
+              src="https://res.cloudinary.com/dhjyfpw6f/image/upload/v1756157492/2_eolxkn.png"
+              alt="Ramadan Mohamed"
+              className="w-80 h-80 rounded-full object-cover border-4 border-blue-400 shadow-2xl hover:scale-105 transition-all duration-300 mx-auto"
+            />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-t from-blue-600/20 to-transparent"></div>
+          </div>
+          
+          <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-400/50 transition-all duration-300 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-semibold text-white mb-2">Education & Background</h3>
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <Award className="w-6 h-6 text-blue-400" />
+              <h4 className="text-xl text-white font-medium">Bachelor of Computer and Control Engineering</h4>
+            </div>
+            <p className="text-gray-300 text-lg">Assiut University, Egypt (October 2020 - July 2025)</p>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-left">
             <h3 className="text-2xl font-semibold text-white mb-6">
               Bridging Hardware and Software
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              As an Embedded System and Electrical Engineer, I specialize in creating innovative solutions 
-              that seamlessly integrate hardware and software components. My passion lies in developing 
-              efficient, reliable, and scalable embedded systems for various applications.
+              I graduated from the Faculty of Engineering, Assiut University, specializing in Computer and Control
+              Engineering. My academic background equipped me with a strong foundation in C, C++, Electronics, and
+              Embedded Systems, along with hands-on experience in Arduino, Raspberry Pi, microcontrollers, and PCB
+              design.
             </p>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              With extensive experience in microcontroller programming, circuit design, and system 
-              optimization, I bring a comprehensive understanding of both the electrical and software 
-              aspects of modern embedded systems.
+              I have worked on various projects that enhanced my practical skills in hardware design, programming,
+              and system integration. My expertise spans across multiple microcontroller platforms including
+              Arduino, ESP, AVR, PIC, STM32, and Raspberry Pi.
             </p>
             <p className="text-gray-300 mb-8 leading-relaxed">
-              I'm constantly exploring new technologies and methodologies to stay at the forefront 
-              of embedded systems development, from IoT applications to industrial automation solutions.
+              I am passionate about embedded systems engineering and committed to applying my
+              expertise to develop innovative, reliable, and efficient solutions that address real-world challenges.
             </p>
-
-            {/* Achievements */}
-            <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-white mb-4">Achievements & Involvement</h4>
-              {achievements.map((achievement, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 p-3 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105"
-                >
-                  {achievement.icon}
-                  <div>
-                    <h5 className="text-white font-medium">{achievement.title}</h5>
-                    <p className="text-gray-400 text-sm">{achievement.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6 animate-fade-in-right">
+          <div className="grid gap-6 animate-fade-in-right">
             {highlights.map((highlight, index) => (
               <div
                 key={index}

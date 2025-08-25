@@ -1,61 +1,47 @@
 import React from 'react';
-import { ExternalLink, Github, Cpu, Zap, Wifi, Gauge, Shield, Radio } from 'lucide-react';
+import { ExternalLink, Github, Cpu, Zap, Wifi, Shield, Bot, Lock } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
     {
-      title: "Smart Home Automation System",
-      description: "Comprehensive IoT-based home automation system using ESP32 microcontrollers with real-time monitoring, mobile app control, and voice command integration. Features include lighting control, security monitoring, and energy management.",
-      technologies: ["ESP32", "C++", "WiFi", "MQTT", "Mobile App", "Voice Control", "Sensors"],
-      icon: <Wifi className="w-8 h-8 text-blue-400" />,
+      title: "Touchless & 2-wire data/power bus Elevator System",
+      description: "Smart elevator system using PIC microcontrollers with touchless buttons, 2-wire data/power bus, 60V retiring cam via boost converter, and desktop simulator. Includes Maintainer Unit for real-time diagnostics, Phase Correction Module for AC safety, and PC-based Sniffer for debugging and system control.",
+      technologies: ["PIC Microcontroller", "Boost Converter", "Touchless Interface", "Real-time Diagnostics", "AC Safety", "Desktop Simulator", "System Control"],
+      icon: <Zap className="w-8 h-8 text-blue-400" />,
       image: "https://images.pexels.com/photos/159201/circuit-circuit-board-resistor-computer-159201.jpeg?auto=compress&cs=tinysrgb&w=600",
       github: "#",
-      demo: "#"
+      demo: "#",
+      type: "Graduation Project"
     },
     {
-      title: "Industrial Motor Control System",
-      description: "Advanced motor control system with PID algorithms, speed regulation, and safety monitoring. Implemented using STM32 microcontroller with CAN bus communication for industrial applications.",
-      technologies: ["STM32", "C", "PID Control", "PWM", "CAN Bus", "Industrial Protocols", "Safety Systems"],
-      icon: <Gauge className="w-8 h-8 text-green-400" />,
+      title: "Minesweeper Robot",
+      description: "Mine-detecting robot using Raspberry Pi and ROS2 Humble. Features magnetic coil for detection, proximity sensors for surface/underground mine identification, gripper with limit switches for pickup, and siren/flash with speaker alerts for safety notifications.",
+      technologies: ["Raspberry Pi", "ROS2 Humble", "Magnetic Coil", "Proximity Sensors", "Gripper Control", "Limit Switches", "Audio/Visual Alerts"],
+      icon: <Bot className="w-8 h-8 text-green-400" />,
       image: "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg?auto=compress&cs=tinysrgb&w=600",
       github: "#",
-      demo: "#"
+      demo: "#",
+      type: "ROS2 Project"
     },
     {
-      title: "Wireless Sensor Network",
-      description: "Multi-node wireless sensor network for environmental monitoring with mesh topology, low-power design, and cloud integration. Deployed for agricultural and industrial monitoring applications.",
-      technologies: ["LoRa", "Mesh Network", "Low Power Design", "Cloud Integration", "Data Analytics"],
-      icon: <Radio className="w-8 h-8 text-purple-400" />,
+      title: "Sumo Robot",
+      description: "Autonomous Sumo robot built for competition using ESP32 with advanced sensor integration. Features 5 ultrasonic sensors and 4 IR sensors for opponent tracking and edge detection, with 2 DC motors providing real-time control for ring-based competition scenarios.",
+      technologies: ["ESP32", "Ultrasonic Sensors", "IR Sensors", "DC Motors", "Opponent Tracking", "Edge Detection", "Real-time Control"],
+      icon: <Cpu className="w-8 h-8 text-purple-400" />,
       image: "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=600",
       github: "#",
-      demo: "#"
+      demo: "#",
+      type: "Competition Project"
     },
     {
-      title: "Security Access Control System",
-      description: "RFID-based access control system with biometric authentication, real-time logging, and remote monitoring capabilities. Features encrypted communication and tamper detection.",
-      technologies: ["RFID", "Biometric", "Encryption", "Real-time Logging", "Security Protocols"],
-      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: "Electronic Lock System",
+      description: "Password-protected electronic lock system using ATmega32 microcontroller with keypad input and LCD display. Features voice feedback for user interaction, audio/visual confirmation, password change capability, and secure system unlocking upon correct input verification.",
+      technologies: ["ATmega32", "Keypad Interface", "LCD Display", "Voice Feedback", "Audio/Visual Alerts", "Password Management", "Security System"],
+      icon: <Lock className="w-8 h-8 text-red-400" />,
       image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=600",
       github: "#",
-      demo: "#"
-    },
-    {
-      title: "Power Management PCB Design",
-      description: "Multi-rail power management system with efficient DC-DC converters, battery charging circuits, and intelligent power monitoring. Optimized for renewable energy applications.",
-      technologies: ["Altium Designer", "Power Electronics", "Battery Management", "DC-DC Converters", "Renewable Energy"],
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      image: "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=600",
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Real-Time Data Acquisition",
-      description: "High-speed multi-channel data acquisition system with real-time processing, USB communication, and advanced signal conditioning for research and industrial applications.",
-      technologies: ["ARM Cortex-M", "High-Speed ADC", "Real-time Processing", "USB", "Signal Conditioning"],
-      icon: <Cpu className="w-8 h-8 text-cyan-400" />,
-      image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=600",
-      github: "#",
-      demo: "#"
+      demo: "#",
+      type: "ITI Project"
     }
   ];
 
@@ -90,6 +76,11 @@ export default function Projects() {
               </div>
               
               <div className="p-6">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs font-medium text-blue-400 bg-blue-400/10 px-2 py-1 rounded-full">
+                    {project.type}
+                  </span>
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {project.title}
                 </h3>

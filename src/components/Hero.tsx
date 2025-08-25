@@ -29,15 +29,15 @@ export default function Hero() {
           <div className="animate-fade-in-up delay-300">
             <h2 className="text-2xl md:text-3xl text-blue-400 font-semibold mb-8 flex items-center justify-center gap-2">
               <Zap className="w-8 h-8 animate-pulse" />
-              Embedded System & Electrical Engineer
+              Computer & Control Engineering Graduate
             </h2>
           </div>
           
           <div className="animate-fade-in-up delay-500">
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Passionate about designing innovative embedded systems and electrical solutions. 
-              Specializing in microcontroller programming, circuit design, and IoT applications 
-              that bridge the gap between hardware and software.
+              Passionate about embedded systems engineering with expertise in microcontroller programming, 
+              circuit design, and system integration. Committed to developing innovative, reliable, and 
+              efficient solutions that address real-world challenges.
             </p>
           </div>
           

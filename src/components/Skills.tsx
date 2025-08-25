@@ -6,37 +6,37 @@ export default function Skills() {
     {
       icon: <Microchip className="w-8 h-8 text-blue-400" />,
       title: "Microcontrollers & Processors",
-      skills: ["ARM Cortex-M", "AVR", "PIC", "ESP32/ESP8266", "Arduino", "Raspberry Pi", "STM32", "MSP430"]
+      skills: ["Arduino", "ESP32/ESP8266", "AVR", "PIC", "STM32", "Raspberry Pi", "ARM Cortex-M"]
     },
     {
       icon: <Code2 className="w-8 h-8 text-green-400" />,
       title: "Programming Languages",
-      skills: ["C/C++", "Python", "Assembly", "VHDL/Verilog", "MATLAB", "LabVIEW", "JavaScript", "Embedded C"]
+      skills: ["C/C++", "Embedded C", "Python"]
     },
     {
       icon: <Wrench className="w-8 h-8 text-orange-400" />,
-      title: "Design & Simulation Tools",
-      skills: ["Altium Designer", "KiCad", "Eagle PCB", "Proteus", "LTSpice", "Multisim", "SolidWorks", "AutoCAD"]
-    },
-    {
-      icon: <Settings className="w-8 h-8 text-purple-400" />,
-      title: "Development Tools",
-      skills: ["Git/GitHub", "JTAG/SWD", "Oscilloscope", "Logic Analyzer", "Multimeter", "Function Generator", "IDE (Keil, IAR)", "GCC Toolchain"]
+      title: "Electronics & PCB Design",
+      skills: ["PCB Design", "Circuit Design & Debugging", "Electronics","Hardware Testing", "Proteus","LTSpice","Multisim", "Eagle PCB", "EasyEDA"]
     },
     {
       icon: <Wifi className="w-8 h-8 text-cyan-400" />,
       title: "Communication Protocols",
-      skills: ["I2C", "SPI", "UART", "CAN", "Ethernet", "WiFi", "Bluetooth", "Modbus", "USB", "RS485"]
+      skills: ["UART", "I2C", "SPI", "CAN", "WiFi"]
+    },
+    {
+      icon: <Settings className="w-8 h-8 text-purple-400" />,
+      title: "Systems & Integration",
+      skills: ["RTOS", "Sensors & Actuators", "Hardware Testing", "Troubleshooting", "System Integration", "Control Systems"]
     },
     {
       icon: <Database className="w-8 h-8 text-red-400" />,
-      title: "Specialized Areas",
-      skills: ["RTOS", "IoT Systems", "Power Electronics", "Signal Processing", "Control Systems", "Sensor Integration", "Motor Control", "PCB Design"]
+      title: "Soft Skills",
+      skills: ["Problem-solving", "Analytical Thinking", "Collaboration", "Teamwork", "Communication", "Project Management"]
     }
   ];
 
   return (
-    <section id="skills" className="py-20 bg-black">
+    <section id="skills" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-white mb-4">Technical Skills</h2>
