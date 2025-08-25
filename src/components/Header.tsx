@@ -47,7 +47,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
             <a href="https://www.linkedin.com/in/ramadan-mohamed-31624a220/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-125 hover:rotate-12">
               <Linkedin size={20} />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-125 hover:rotate-12">
+            <a href="https://github.com/RamadanMohamed11" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-125 hover:rotate-12">
               <Github size={20} />
             </a>
             <a href="mailto:ramadan.work010@gmail.com" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:scale-125 hover:rotate-12">
@@ -88,7 +88,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
               <a href="https://www.linkedin.com/in/ramadan-mohamed-31624a220/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-125">
                 <Linkedin size={20} />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-125">
+              <a href="https://github.com/RamadanMohamed11" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-125">
                 <Github size={20} />
               </a>
               <a href="mailto:ramadan.work010@gmail.com" className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:scale-125">

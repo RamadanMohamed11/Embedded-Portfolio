@@ -88,7 +88,7 @@ export default function Contact() {
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/RamadanMohamed11"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:scale-110 hover:rotate-12"
