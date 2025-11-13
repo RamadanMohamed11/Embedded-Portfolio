@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronDown, Download, Zap } from 'lucide-react';
+import cvUrl from '../assets/Ramadan_Mohamed_Electrical & Embedded System Engineer_resume.pdf';
 
 export default function Hero() {
   const scrollToAbout = () => {
@@ -45,13 +46,13 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <button
                 onClick={scrollToAbout}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 animate-pulse-slow"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 animate-pulse-slow"  
               >
                 Explore My Work
               </button>
               <a
-                href="/Ramadan_Mohamed_Electrical & Embedded System Engineer_resume.pdf"
-                download
+                href={cvUrl}
+                download="Ramadan_Mohamed_Electrical & Embedded System Engineer_resume.pdf"
                 className="flex items-center gap-2 border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-400/25"
               >
                 <Download size={20} className="animate-bounce" />

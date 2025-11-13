@@ -59,8 +59,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium text-white group-hover:text-green-400 transition-colors">WhatsApp</h4>
-                  <a href="https://wa.me/2001505599648" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
-                    01505599648
+                  <a href="https://wa.me/2001067911051" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
+                    01067911051
                   </a>
                 </div>
               </div>
