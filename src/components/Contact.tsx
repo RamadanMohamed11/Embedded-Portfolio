@@ -8,6 +8,9 @@ export default function Contact() {
     subject: '',
     message: ''
   });
+  const [submitting, setSubmitting] = useState(false);
+  const [resultMessage, setResultMessage] = useState<string | null>(null);
+  const [resultType, setResultType] = useState<'success' | 'error' | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -16,12 +19,40 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setSubmitting(true);
+    setResultMessage(null);
+    setResultType(null);
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/ramadan.work010@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name || undefined,
+          email: formData.email || undefined,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: `Portfolio Contact: ${formData.subject}`,
+        }),
+      });
+      if (res.ok) {
+        setResultType('success');
+        setResultMessage('Message sent! I will get back to you soon.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setResultType('error');
+        setResultMessage('Something went wrong. Please try again later.');
+      }
+    } catch {
+      setResultType('error');
+      setResultMessage('Network error. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -102,9 +133,6 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="animate-fade-in-right">
             <form 
-              action="mailto:ramadan.work010@gmail.com" 
-              method="post" 
-              encType="text/plain"
               onSubmit={handleSubmit} 
               className="bg-gray-900/50 p-8 rounded-xl border border-gray-800 hover:border-blue-400/50 transition-all duration-300"
             >
@@ -121,7 +149,6 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white placeholder-gray-400"
                     placeholder="Your Name"
                   />
@@ -136,7 +163,6 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white placeholder-gray-400"
                     placeholder="your.email@example.com"
                   />
@@ -177,11 +203,17 @@ export default function Contact() {
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+                disabled={submitting}
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send className="w-5 h-5" />
-                Send Message
+                {submitting ? 'Sending...' : 'Send Message'}
               </button>
+              {resultMessage && (
+                <p className={`mt-4 text-center ${resultType === 'success' ? 'text-green-400' : 'text-red-400'}`}>
+                  {resultMessage}
+                </p>
+              )}
             </form>
           </div>
         </div>
