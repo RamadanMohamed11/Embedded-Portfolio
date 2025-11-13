@@ -58,6 +58,14 @@ export default function Hero() {
                 <Download size={20} className="animate-bounce" />
                 Download CV
               </a>
+              <a
+                href="https://ramadan-mohamed-portfolio.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+              >
+                Flutter Portfolio
+              </a>
             </div>
           </div>
 

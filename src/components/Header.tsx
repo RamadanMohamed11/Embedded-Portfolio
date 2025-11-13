@@ -40,6 +40,9 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
             <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:scale-110">
               Contact
             </button>
+            <a href="https://ramadan-mohamed-portfolio.netlify.app" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:scale-110">
+              Flutter Portfolio
+            </a>
           </nav>
 
           {/* Social Links */}
@@ -83,6 +86,9 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
               <button onClick={() => scrollToSection('contact')} className="text-left text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2">
                 Contact
               </button>
+              <a href="https://ramadan-mohamed-portfolio.netlify.app" target="_blank" rel="noopener noreferrer" className="text-left text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2">
+                Flutter Portfolio
+              </a>
             </nav>
             <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-gray-800">
               <a href="https://www.linkedin.com/in/ramadan-mohamed-31624a220/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-125">
